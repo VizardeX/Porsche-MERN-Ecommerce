@@ -1,0 +1,385 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(219, 69%, 56%);
+  --first-color-alt: hsl(219, 69%, 52%);
+  --title-color: hsl(219, 8%, 95%);
+  --text-color: hsl(219, 8%, 75%);
+  --text-color-light: hsl(219, 4%, 55%);
+  --white-color: #fff;
+  --body-color: hsl(219, 4%, 4%);
+  --container-color: hsl(219, 4%, 7%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Exo', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color) !important;
+  color: var(--text-color) !important;
+
+}
+
+h1, h2, h3 {
+  color: var(--title-color) !important;
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.main {
+  overflow: hidden ;
+}
+
+/*=============== HEADER & NAV ===============*/
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Align items at the ends */
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+    width: 100%; /* Make the navbar stretch across the entire width */
+    background-color: #000000; /* Example background color */
+}
+.navbar.bg-dark.fixed-top {
+    background-color: black !important;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #EBD698;
+}
+
+/* New styles added */
+.navbar .navbar-toggler {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .navbar-toggler-icon {
+    order: -1; /* This will reverse the order of the icon, placing it on the right */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#porscheLogo {
+    width: 20%; /* Use a percentage to make the logo responsive */
+    max-width: 200px; /* Set a maximum width to avoid excessive scaling */
+    opacity: 0;
+    animation: fadeInLogo 1s ease-in-out 1s forwards;
+}
+
+#porscheLogo2{
+    width: 50px;
+    height: 50px;
+
+
+}
+
+
+
+
+/* Show menu */
+
+
+/* Change background header */
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+.home{
+  position: relative;
+  overflow: hidden;
+
+}
+.home__container{
+  position: relative;
+  padding-top: 10rem;
+}
+
+.home__data{
+    text-align: center;
+}
+.home__title{
+    font-size: var(--h1-font-size);
+    margin-bottom: 1rem;
+}
+.home__subtitle{
+    font-size: var(--h3-font-size);
+    margin-bottom: .25rem;
+}
+
+.home__elec {
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+}
+/* color of flash icon */
+.home__elec i{
+    color: var(--first-color)
+}
+
+
+/* set Position for image */
+.home__img{
+    width: 280px;
+    justify-self: center;
+
+}
+
+.home__car{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    column-gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+.home__car-name{
+    font-size: .625rem;
+    font-weight: 400;
+    color: var(--text-color-light);
+}
+
+.home__car-data{
+    text-align: center;
+}
+.home__car-number{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: .25rem;
+
+}
+
+
+.home__car-icon{
+    background-color: var(--container-color);
+    border-radius: 50%;
+    padding: .367rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .875rem;
+    margin-bottom: .75rem;
+}
+
+
+.home__button{
+    position: relative;
+    border: 2px solid hsl(158,89%,30%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    justify-self: center;
+    font-size: var(--small-font-size);
+    color: var(--white-color);
+    font-weight: var(--font-medium);
+}
+
+.home__button::before{
+    content: '';
+    border: 2px solid hsl(158,98%,43%);
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 12px hsl(158,98%,43%);
+    transition: .3s;
+    animation: button 3s infinite;
+
+}
+
+/* Button animate */
+@keyframes button {
+    0%{
+        box-shadow: 0 0 12px hsl(158,98%,43%);
+    }
+    50%{
+        box-shadow: 0 0 24px hsl(158,98%,43%);
+    }
+
+
+}
+.video-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 80vw;
+    max-width: 800px; /* Adjust max-width as needed */
+    height: auto;
+    max-height: 80vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#popupVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+
+
+
+
+/*=============== BUTTON ===============*/
+
+
+/*=============== ABOUT ===============*/
+
+
+/*=============== POPULAR ===============*/
+
+
+/* Swiper class */
+
+
+/*=============== FEATURES ===============*/
+
+
+/*=============== FEATURED ===============*/
+
+
+/* Active link featured */
+
+
+/*=============== OFFER ===============*/
+
+
+/*=============== LOGOS ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */

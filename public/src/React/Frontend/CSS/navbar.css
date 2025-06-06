@@ -1,0 +1,43 @@
+/* Sidebar navigation styles */
+.pos-f-t {
+    height: 100vh;
+    width: 250px; /* Adjust the width as needed */
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide the sidebar by default */
+    background-color: #222; /* Darker background color */
+    color: #fff; /* White text color */
+    transition: left 0.3s ease; /* Smooth transition effect */
+    z-index: 1031; /* Ensure it appears above other content */
+    padding-top: 60px; /* Add padding to make space for the navbar */
+}
+
+.collapsed {
+    left: 0; /* Show the sidebar when collapsed */
+}
+
+.navbar-toggler {
+    margin-left: 250px; /* Adjust the margin to prevent overlap */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor */
+    outline: none; /* Remove outline */
+}
+
+.navbar-toggler-icon {
+
+    width: 80px; /* Set width */
+    height: 80px; /* Set height */
+    background-image: url('../../Images/hamMenu.svg'); /* Replace 'path/to/your-icon.svg' with your icon image */
+    background-size: cover; /* Cover the button with the icon */
+    background-repeat: no-repeat; /* Prevent icon from repeating */
+}
+
+/* Content styles */
+.bg-dark {
+    background-color: #222 !important; /* Dark background color */
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important; /* White text color for navigation links */
+}

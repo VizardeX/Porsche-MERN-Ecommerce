@@ -1,0 +1,136 @@
+/* Resetting margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif; /* Setting the font family for all elements to 'poppins' and fallback to sans-serif */
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    /* Setting the background image with no-repeat */
+    background: url('../../Images/7elwa.jpg') no-repeat;
+    background-position: center ;
+    background-size: cover;
+
+}
+
+
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+/* shows lines under box remove if u want*/
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+/* input label kolo*/
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+/* input box nafso for both*/
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+.forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.forget label input{
+    margin-right: 3px;
+}
+.forget label a{
+    color: aquamarine;
+    text-decoration: none;
+    margin-left: 60px;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a{
+    text-decoration: none;
+    color:  aquamarine;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+/* Resetting margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+.navbar.bg-dark.fixed-top {
+    background-color: transparent !important;
+}
+.navbar .navbar-toggler {
+    display: flex;
+    justify-content: end;
+}
+
+.navbar .navbar-toggler-icon {
+    order: -1; /* This will reverse the order of the icon, placing it on the right */
+    background-color: transparent;
+}

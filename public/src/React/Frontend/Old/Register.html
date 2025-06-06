@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Reg.css">
+
+    <script src="../ButtonManager.js" defer></script>
+    <title>BADRAWY - Register</title>
+    <style>
+        /* Resetting margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif; /* Setting the font family for all elements to 'poppins' and fallback to sans-serif */
+        }
+
+        body {
+            background-color: #f2f2f2;
+            overflow: hidden; /* Hide overflow to prevent scrolling during animation */
+        }
+
+        .navbar {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .navbar.fade-in {
+            opacity: 1;
+            max-height: 200px; /* Set a maximum height */
+            overflow: hidden;
+            pointer-events: auto;
+        }
+
+        .navbar.fade-out {
+            opacity: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .navbar a:hover {
+            color: #EBD698;
+            background-color: rgba(235, 214, 152, 0.7);
+            transform: scale(1.05);
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background: url('../Images/betga7da.jpg') center center/cover no-repeat fixed;
+        }
+
+        .form-box {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            position: relative;
+            width: 400px;
+            height: 450px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+        }
+
+        .inputbox {
+            position: relative;
+            margin: 30px 0;
+            width: 310px;
+            border-bottom: 2px solid #fff;
+        }
+
+        .inputbox label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 1em;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        input:focus ~ label,
+        input:valid ~ label {
+            top: -5px;
+        }
+
+        .inputbox input {
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            padding: 0 35px 0 5px;
+            color: #fff;
+        }
+
+        .forget {
+            margin: -15px 0 15px;
+            font-size: .9em;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .forget label input {
+            margin-right: 3px;
+        }
+
+        .forget label a {
+            color: aquamarine;
+            text-decoration: none;
+            margin-left: 60px;
+        }
+
+        .forget label a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+            border-radius: 40px;
+            background: #fff;
+            border: none;
+            outline:none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .register {
+            font-size: .9em;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .register p a {
+            text-decoration: none;
+            color:  aquamarine;
+            font-weight: 600;
+        }
+
+        .register p a:hover {
+            text-decoration: underline;
+        }
+
+        .fabdo {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <a href="#" onclick="navigateTo('HomePage.html')">Home</a>
+    <a href="#" onclick="navigateTo('AboutPage.html')">About</a>
+    <a href="#" onclick="navigateTo('Login.html')">Login</a>
+</div>
+
+<form id="form2" runat="server">
+    <section class="fade-in">
+        <div class="form-box">
+            <div class="form-value">
+                <h2>Register</h2>
+                <div class="inputbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" id="Username" runat="server" required />
+                    <label for="Username">Username</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="Email" runat="server" required />
+                    <label for="Email">Email</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="Password" runat="server" required />
+                    <label for="Password">Password</label>
+                </div>
+
+                <button id="RegisterButton" runat="server" onserverclick="RegisterButton_ServerClick">Register</button>
+                <div class="login" style="margin-top: 10px;">
+                    <p class="fabdo">Already have an account? <a href="#" id="LoginLink" runat="server" onserverclick="LoginLink_ServerClick">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+<script>
+    const navbar = document.getElementById('navbar');
+
+    document.addEventListener('mousemove', function (event) {
+        const isTop = event.clientY < 50;
+        const isBottom = window.innerHeight - event.clientY < 50;
+
+        if (isTop || isBottom) {
+            navbar.classList.remove('fade-out');
+            navbar.classList.add('fade-in');
+        } else {
+            navbar.classList.remove('fade-in');
+            navbar.classList.add('fade-out');
+        }
+    });
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

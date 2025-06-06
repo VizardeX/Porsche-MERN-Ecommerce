@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+   background-color:black !important;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Align items at the ends */
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+    width: 100%; /* Make the navbar stretch across the entire width */
+    background-color: #000000; /* Example background color */
+}
+.navbar.bg-dark.fixed-top {
+    background-color: transparent !important;
+}
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #EBD698;
+}
+
+/* New styles added */
+.navbar .navbar-toggler {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .navbar-toggler-icon {
+    order: -1; /* This will reverse the order of the icon, placing it on the right */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#porscheLogo {
+    width: 20%; /* Use a percentage to make the logo responsive */
+    max-width: 200px; /* Set a maximum width to avoid excessive scaling */
+    opacity: 0;
+    animation: fadeInLogo 1s ease-in-out 1s forwards;
+}
+
+#porscheLogo2{
+    width: 50px;
+    height: 50px;
+    /*animation-name: glow;*/
+    animation-duration: 4s;
+    /* animation is repeated */
+    animation-iteration-count: infinite;
+
+}
+
+
+@keyframes glow { /* width height blur radius*/
+    25%{box-shadow: 50px 20px 80px #00ffff
+    }
+
+}
+
+
+
+
+.mySwiper{
+    width: 90%;
+    margin: 50px auto;
+
+
+
+}
+
+/* slideer */
+.slider-box{
+
+    width: 100%;
+    padding: 20px;
+    border: 1px transparent ;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    user-select: none;
+}
+
+/* sha2leb el text in odd order of slides*/
+.swiper-slide:nth-of-type(odd) .slider-box{
+    flex-direction: column-reverse;
+}
+
+.slider-img{
+    width:100%;
+    height: 600px;
+    filter: grayscale(0.8);
+    opacity: 0.8;
+    transition: all ease 0.3s;
+}
+.slider-box:hover .slider-img{
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+
+
+.slider-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.slider-text strong{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.slider-video {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-video video {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0.8);
+    object-fit: cover;
+    transition: all ease 0.3s;
+}
+
+.slider-box:hover .slider-video video {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* Explanation:
+This CSS code targets elements with the class 'swiper-pagination', which is typically used in conjunction with swiper.js library for creating sliders or carousels.
+It's overriding the default positioning behavior and setting additional styling properties.
+*/
+
+.swiper-pagination {
+    /*
+    Setting the 'position' property to 'static' ensures that the pagination elements remain in their normal position within the document flow.
+    'static' is the default value for the 'position' property.
+    '!important' is used to give this rule higher specificity, ensuring it overrides any other conflicting rules.
+    */
+
+
+    position: static !important;
+
+    /* Explanation:
+    Adding a margin of 10 pixels on the top side of the pagination element(s).
+    This creates space between the pagination and other content above it.
+    */
+    margin-top: 10px;
+}
+
+/* Increase the size of the bullets in Swiper pagination */
+.swiper-pagination .swiper-pagination-bullet {
+    width: 20px; /* Increase bullet width */
+    height: 20px; /* Increase bullet height */
+    margin: 0 5px; /* Adjust margin as needed */
+    border-radius: 50%; /* Makes bullets circular */
+    background-color: grey; /* Change background color as needed */
+}
+
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+    background-color: #fff; /* Change active bullet background color as needed */
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+}
+
+@media (max-width: 600px){
+    .slider-img{
+        height: 500px;
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Porsche</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/AboutPage.css">
+    <!-- Custom JavaScript -->
+    <script src="ButtonManager.js" defer></script>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <img id="porscheLogo2" src="Images/home.png" alt="Porsche Logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="navigateTo('Home2.html')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"onclick="navigateTo('Login.html')">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"onclick="navigateTo('Register2.html')">SignUp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"onclick="navigateTo('carSlider.html')">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#"onclick="navigateTo('AboutPage.html')">About Us</a></li>
+                            <li><a class="dropdown-item" href="#"onclick="navigateTo('https://www.porsche.com/middle-east/_egypt_/')">Official Website</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="navigateTo('contactUS.html')">Contact us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="content-container">
+    <img id="porscheLogo" src="Images/home.png" alt="Porsche Logo">
+    <div class="text-content">
+        <h1>About Porsche</h1>
+        <p>
+            Porsche is a German luxury sports car manufacturer founded in 1931 by Ferdinand Porsche.
+            The company is known for producing high-performance sports cars, SUVs, and sedans.
+            Porsche has a rich history in motorsports and has achieved numerous victories in prestigious races.
+            The brand's mission is to create exceptional driving experiences and innovative automotive solutions.
+            With a commitment to quality and craftsmanship, Porsche continues to be a symbol of automotive excellence.
+        </p>
+        <p>
+            Porsche was founded in 1931 by Ferdinand Porsche in Stuttgart, Germany.
+            The iconic Porsche 911 was introduced in 1963 and remains one of the most recognizable sports cars.
+            The company has a strong presence in motorsports, with numerous victories at events like Le Mans.
+            In 2002, Porsche introduced its first SUV, the Porsche Cayenne, expanding its product lineup.
+            The electric Porsche Taycan, introduced in 2019, showcases the brand's commitment to sustainability.
+        </p>
+        <p>
+            <strong>Mission:</strong> Porsche's mission is to consistently deliver exceptional driving experiences and
+            innovative automotive solutions that exceed customer expectations, while upholding the highest standards of quality and craftsmanship.
+        </p>
+        <p>
+            <strong>Notable Achievements:</strong>
+        <ul>
+            <li>Introduction of the Porsche 911, an iconic and enduring model, in 1963.</li>
+            <li>Launch of the Porsche 911 Turbo in 1972, the first production sports car with an exhaust turbocharger.</li>
+            <li>Entry into the SUV market with the Porsche Cayenne in 2002.</li>
+            <li>Unveiling of the Porsche Taycan in 2019, the first all-electric sports car from Porsche.</li>
+        </ul>
+        </p>
+    </div>
+</div>
+
+<!-- Bootstrap JS (Optional, if you need JavaScript features) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
